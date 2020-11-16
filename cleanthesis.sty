@@ -243,15 +243,15 @@
 	%
 	%\RequirePackage{helvet}	% Font:	Helvetica
 	%\RequirePackage{nimbus}	% Font:	Nimbus Sans, a clone of the Helvetica
-	\RequirePackage{tgheros}	% Font:	TEX Gyre Heros
+	%\RequirePackage{tgheros}	% Font:	TEX Gyre Heros
 	%\RequirePackage{libertine}	% Font:	Biolinum, the standard sans serif typeface with the Libertine package
 	%\RequirePackage[scaled]{berasans} % Font:	Bera Sans, a a version of Bitstream Vera Sans slightly enhanced
-	\renewcommand*\familydefault{\sfdefault}%
+	%\renewcommand*\familydefault{\sfdefault}%
 \else
 	% Using serif fonts
 	%
-	\RequirePackage{lmodern}	% font set: Latin Modern
-	\RequirePackage{charter}	% font set: Charter
+	%\RequirePackage{lmodern}	% font set: Latin Modern
+	%\RequirePackage{charter}	% font set: Charter
 	%\RequirePackage{fourier}	% font set: (basically improved utopia)
 \fi
 
@@ -592,6 +592,15 @@
 \addtokomafont{subsubsection}{\tgherosfont}
 %\addtokomafont{paragraph}{\tgherosfont}
 \setkomafont{paragraph}{\thesisparagraphfont}
+\setkomafont{pagenumber}{\tgherosfont}
+
+% Das ist ein LModern bösewicht
+\setkomafont{partentry}{\book}
+\setkomafont{chapterentry}{\book}
+
+% Wird von Caption überschrieben
+% \setkomafont{caption}{\book}
+% \setkomafont{captionlabel}{\book}
 
 %\setkomafont{subsection}{\large} % for subsection entries
 
